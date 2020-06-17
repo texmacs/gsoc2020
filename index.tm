@@ -15,7 +15,7 @@
     <item>Materials provided by the Student
 
     <\itemize>
-      <item>Proposal
+      <item><hlink|Proposal|proposal.tm>
 
       <item>Other documents
     </itemize>
@@ -62,10 +62,35 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|?|?|../../.TeXmacs/texts/scratch/no_name_152.tm>>
-    <associate|auto-2|<tuple|?|?|../../.TeXmacs/texts/scratch/no_name_152.tm>>
-    <associate|auto-3|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?|../../.TeXmacs/texts/scratch/no_name_152.tm>>
-    <associate|auto-4|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?|../../.TeXmacs/texts/scratch/no_name_152.tm>>
-    <associate|auto-5|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?|../../.TeXmacs/texts/scratch/no_name_152.tm>>
+    <associate|auto-1|<tuple|?|?>>
+    <associate|auto-2|<tuple|?|?>>
+    <associate|auto-3|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?>>
+    <associate|auto-4|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?>>
+    <associate|auto-5|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?>>
   </collection>
 </references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|toc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Timeline>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-1><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Links>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Quickstart>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|Download
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
+
+      <with|par-left|<quote|1tab>|Update <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5>>
+    </associate>
+  </collection>
+</auxiliary>
