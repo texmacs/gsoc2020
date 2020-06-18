@@ -5,7 +5,44 @@
 <\body>
   <doc-data|<doc-title|GSoC 2020 Project for GNU <TeXmacs>>>
 
-  <section*|Timeline>
+  <section*|Task>
+
+  <\itemize-dot>
+    <item>TeXmacs -\<gtr\> markdown converter development
+
+    <\itemize-dot>
+      <item>Incorporate max's <hlink|tm2md|https://bitbucket.org/mdbenito/tm2md/src/master/>
+      converter into TeXmacs. (done)
+
+      <item>Write new menu and preference. (done)
+
+      <item>Bug Fixing
+    </itemize-dot>
+
+    <item>markdown -\<gtr\> TeXmacs converter development
+
+    <\enumerate-numeric>
+      <item>Direct Conversion
+
+      <\itemize-dot>
+        <item>Write C++ code for parsing markdown document as
+        <verbatim|tree>. (WIP)
+
+        <item>Write scheme code for tree -\<gtr\> md-stree conversion.
+
+        <item>Write scheme code for md-stree -\<gtr\> tm-stree conversion.
+      </itemize-dot>
+
+      <item>Inderect Conversion (makeshift)
+
+      <\itemize-dot>
+        <item>Use markdown -\<gtr\> html 3rd party script and exsited html
+        -\<gtr\> TeXmacs converter to implement conversion.
+      </itemize-dot>
+    </enumerate-numeric>
+
+    \;
+  </itemize-dot>
 
   <section*|Links>
 
@@ -63,7 +100,7 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|?|?>>
-    <associate|auto-2|<tuple|?|?>>
+    <associate|auto-2|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
     <associate|auto-3|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?>>
     <associate|auto-4|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?>>
     <associate|auto-5|<tuple|<with|mode|<quote|math>|<rigid|\<circ\>>>|?>>
