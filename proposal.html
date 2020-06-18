@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="http://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>Proposal for GSoC 2020</title>
+    <meta content="TeXmacs 1.99.12" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.5em; } .subsup { display:
+      inline; vertical-align: -0.2em } .subsup td { padding: 0px; text-align:
+      left} .fraction { display: inline; vertical-align: -0.8em } .fraction td
+      { padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center }
+      .title-block p { margin: 0px } .compact-block p { margin-top: 0px;
+      margin-bottom: 0px } .left-tab { text-align: left } .center-tab {
+      text-align: center } .balloon-anchor { border-bottom: 1px dotted
+      #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em } 
+    </style>
+  </head>
+  <body>
+    <table class="title-block">
+      <tr>
+        <td><table class="title-block">
+          <tr>
+            <td><font style="font-size: 168.2%"><b><p>
+              Proposal for GSoC 2020
+            </p></b></font></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <h2 id="auto-1">1<span style="margin-left: 1em"></span>About Me<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <p>
+        <p>
+          <b>Personal Information</b>
+        </p>
+        <p>
+          <b>Name:</b> Xiang Yue
+        </p>
+        <p>
+          <b>Email:</b> yx1107@foxmail.com
+        </p>
+        <p>
+          <b>Github Account:</b> Blickwinkel1107
+        </p>
+        <p>
+          <b>Education</b>
+        </p>
+        <p>
+          Nanjing University, Nanjing, Jiangsu, China.
+        </p>
+        <p>
+          Computer Science, expected graduation July 2020.
+        </p>
+        <p>
+          <b>Related Experience</b>
+        </p>
+        <p>
+          Three-year C++/Java and Back-end development experience. Led several
+          group projects, like second-hand transaction platform application,
+          independent parkour game and so on.
+        </p>
+        <p>
+          Developed an outdated requirement tracer as an add-on of Eclipse
+          IDE, to help developers find which requirement document is possible
+          to be outdated after commit code changes.
+        </p>
+        <p>
+          Participated in natural language processing researches and in
+          proceedings of  machine translation track of IJCAI 2020.
+        </p>
+        <p>
+          Interned in Intel to help maintain open-source development of the
+          Analytics Zoo framework.
+        </p>
+      </p>
+    </ul>
+    <h2 id="auto-2">2<span style="margin-left: 1em"></span>Project Name<span style="margin-left: 1em"></span></h2>
+    <p>
+      Improved TeXmacs Converters
+    </p>
+    <p>
+      <a href="https://www.gnu.org/software/soc-projects/ideas-2020.html#texmacs"><tt>https://www.gnu.org/software/soc-projects/ideas-2020.html#texmacs</tt></a>
+    </p>
+    <h2 id="auto-3">3<span style="margin-left: 1em"></span>Summary<span style="margin-left: 1em"></span></h2>
+    <p>
+      GNU TeXmacs is a free scientific editing platform designed to create
+      beautiful technical documents. It also provides options for users to
+      convert documental form between TeXmacs document and other forms (eg.
+      Html, BibTex, LaTeX). However, with the development of technique and
+      documental forms, TeXmacs users need more conversion options for more
+      documental forms, which requires contributors to spend much time
+      developing new converters from scratches. To optimize this phenomenon,
+      the proposal aims to develop a new converter for conversion of markdown
+      documents while offering a general framework for converters development.
+      On the one hand, markdown converter will appeal more users to use
+      TeXmacs; on the other hand, the basic framework helps contributors
+      create and write new converters. The proposal lists a detailed
+      development timeline as well. This upgrade will make TeXmacs attract
+      more contributors to join TeXmacs and develop various converters. In
+      addition, this will also bring users more options to import/export and
+      appeal to more users who enjoy using Html5, markdown, and other
+      documental forms.
+    </p>
+    <h2 id="auto-4">4<span style="margin-left: 1em"></span>Benefits<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          More Powerful Converter
+        </p>
+        <p>
+          Today, users on Internet have various options to choose the document
+          to write things, like Jupyter, markdown, MS Office Word, and so on,
+          which means the contributor of TeXmacs needs to upgrade the modules
+          of conversion to enable TeXmacs to support more documents or file
+          format. Not only for better user experience but also for the
+          improvement of TeXmacs itself. 
+        </p>
+        <p>
+          Converters now support conversion to/from Html, BibTex, XML, and
+          LaTeX while users require conversions to more documents in the
+          mainstream, like markdown. So, the development of a markdown
+          converter is the first priority. Most websites use markdown to write
+          help or comments, like Github, Reddit, Diaspora, SourceForge, and so
+          on. This explains why once TeXmacs supports markdown conversion,
+          more users will be attracted.
+        </p>
+        <p>
+          Also, contributors always meet troubles when developing new
+          converters one and another from the very beginning. To handle this,
+          TeXmacs needs a new, easy-to-use framework for converters. For
+          contributors, the framework aims to provide basic functions to
+          create new converters and development and save their time reviewing
+          other parts of codes; for users, new converters provide them a
+          better experience to import/export document forms. TeXmancs also
+          needs to prepare some basic tools and frameworks for contributors to
+          develop converters based on these.
+        </p>
+        <p>
+          The extension of converters and the development of the framework
+          will further empower the current TeXmacs converter functionality and
+          improve the quality of TeXmacs.
+        </p>
+      </li>
+      <li>
+        <p>
+          More Contributors to the GNU community
+        </p>
+        <p>
+          As a GNU project, TeXmacs need to get more opensource people to
+          maintain. A converter framework satisfies contributors who want to
+          add more converters in TeXmacs. They use and refer to the basic
+          functions that the framework provides, and develop more things to
+          empower TeXmacs conversion functionality. My development proposal is
+          only a start, and there can be some bugs within the module. But, the
+          new contributors attracted by these will possibly join us and help
+          maintain the new module, even the whole TeXmacs project. Their
+          contribution will make GNU sphere better and attract more people to
+          join. In the end, good cycle forms, and the GNU community will be
+          larger and stronger.
+        </p>
+      </li>
+      <li>
+        <p>
+          More Users of TeXmacs
+        </p>
+        <p>
+          Better TeXmacs means more users to use our product. Conversion to
+          more documental forms is crucial to attracting users. For instance,
+          if it is possible for conversion between TeXmacs and markdown,
+          TeXmacs will receive a big circle of users since there are thousands
+          of people knowing how to write .md. Also, most of the webpage has
+          applied Html5, so the extension for Html5 converters will draw the
+          attention of plentiful web developers to join TeXmacs. The above all
+          explain why TeXmacs need more powerful converters. So the join of
+          more contributors will bring TeXmacs more converters, which helps
+          TeXmacs receive more users.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-5">5<span style="margin-left: 1em"></span>Deliverables<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          Front End - the Place to Show Conversion Options
+        </p>
+        <p>
+          The framework should make contributors think less about minor code
+          and pay more attention to the algorithm part - the conversion part.
+          So the converter framework needs to help contributors firstly create
+          Front-End items automatically. To achieve this, I need to figure out
+          where the conversion options are presented in TeXmacs, and what
+          codes produce them.
+        </p>
+        <table style="width: 100%">
+          <tbody><tr>
+            <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img src="images/frontend.png" height="393.634976"></img></td>
+          </tr><tr>
+            <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+          </tr><tr>
+            <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><p>
+              <font style="font-size: 84.1%"><p>
+                <b>Figure 1. </b><a id="auto-6"></a>Conversion Options between
+                different document forms
+              </p></font>
+            </p></td>
+          </tr></tbody>
+        </table>
+        <p>
+          There are mainly two steps to locate the Front-End part.
+        </p>
+        <p>
+          First of all, it is important for any developer to locate where
+          users can experience new features at the interface, which is also
+          imperative for inverse engineering. TeXmacs shows conversion options
+          as <tt class="verbatim">File-&gt;Import/Export-&gt;[File Type]</tt> in
+          <b>Figure 1</b>. So the ultimate objective is to add
+          &ldquo;Markdown&rdquo; or other documental form items in submenus of
+          Import and Export options. 
+        </p>
+        <p>
+          Second, locating the source code of front-end view. The front-end
+          codes are at <tt class="verbatim">$TEXMACS_PATH/TeXmacs/progs/texmacs/menus/file-menu.scm</tt>.
+          
+        </p>
+        <p>
+          Line 236~238 shows &ldquo;Import&rdquo; and &ldquo;Export&rdquo;
+          options. And line 108~131 shows submenus, the dynamic options of
+          conversion. We can see these words match what shows in the user-end
+          view. The Scheme codes were written well there, and it is possible
+          for me to figure out the important class within the critical parts. 
+        </p>
+        <p>
+          After getting familiar with them, I can follow the codes written
+          before and link up the front-end modification with framework codes
+          in a short period of time. Still, compilation and testing work is in
+          need and may cost a lot of time.
+        </p>
+      </li>
+      <li>
+        <p>
+          Back-End - How Contributors Write New Converters
+        </p>
+        <p>
+          To further help contributors focus on algorithm part of converters,
+          I need to learn the procedures to write a converter in the Back-End
+          part and try to extend converters. Since markdown and Html5 prevail
+          in communities, I choose to write these two converters as a trial.
+          Also, I do this for the improvement of current converters.
+        </p>
+        <p>
+          Fortunately, to write the core parts of the converter is just the
+          same as writing a function - declare and implement. TeXmacs offers
+          friendly ways to declare converters and data formats (<a href="http://www.texmacs.org/tmweb/manual/webman-convert.en.html"><tt>http://www.texmacs.org/tmweb/manual/webman-convert.en.html</tt></a>)
+          with high abstraction as follows:
+        </p>
+        <pre class="verbatim" xml:space="preserve">
+(define-format <i>format</i>
+  (:name <i>format-name</i>)
+  <i>options</i>)
+(converter <i>from-format-name to-format-name</i>
+  <i>options</i>)</pre>
+        <p>
+          Moreover, we can see example in <tt class="verbatim">$/TEXMACS_PATH/progs/convert/init-html.scm</tt>.
+          This directory shows how converter converts TeXmacs doc to Html. We
+          can locate declaration of &ldquo;Html&rdquo; format (line 36) and
+          converter from &ldquo;texmacs-stree&rdquo; to several html-related
+          data formats (line 48~68). 
+        </p>
+        <p>
+          So, in the same way, I can declare a new converter in a new
+          directory with <tt class="verbatim">init-xxx.scm</tt>. The more important
+          matter is to implement the conversion. 
+        </p>
+        <ol>
+          <li>
+            <p>
+              Markdown converter
+            </p>
+            <p>
+              The <b>first task</b> of the proposal is to import a fresh new
+              markdown converter to TeXmacs. Mere transplanting converter
+              module is not that hard though, more important thing is to
+              verify whether or not the converter can process conversion
+              perfectly. So, my core works are as follows:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  Module Transplant
+                </p>
+                <p>
+                  Contributors of TeXmacs have published a markdown converter.
+                  (<a href="https://bitbucket.org/mdbenito/tm2md/src/master/"><tt>https://bitbucket.org/mdbenito/tm2md/src/master/</tt></a>).
+                  So, I just need to transplant the module into the TeXmacs
+                  code instead of developing markdown converters from
+                  scratches. 
+                </p>
+                <p>
+                  Transplanting seems easy enough though, I shall not only
+                  transplant source code of the markdown converter but also
+                  display markdown converter options in the user interface.
+                  Besides coding, basic testing and verification are also in
+                  need.
+                </p>
+                <p>
+                  In addition, thanks to the existence of the markdown
+                  converter, I can also focus on developing general converter
+                  frameworks to help more contributors transplant their
+                  converters into TeXmacs, just like what I do.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Conversion Bug Fixing
+                </p>
+                <p>
+                  Another problem is how to verify the functionality of the
+                  markdown converter. Transplanting not means everything is
+                  fine, on the contrary, it will possibly bring more bugs and
+                  errors to the project. Also, users want a perfect converter,
+                  not a semi-manufacture. The best way to find bugs is to use
+                  a TeXmacs document as a testing sample and make it be
+                  converted to markdown format as perfect as possible. Bugs
+                  like some text cannot be converted successfully can be
+                  found, and then it is my task to fix this.
+                </p>
+                <p>
+                  The ultimate goal is to make the converter supporting
+                  &ldquo;perfect conversion&rdquo; for
+                  &ldquo;markdown-to-TeXmacs&rdquo; and
+                  &ldquo;TeXmacs-to-markdown&rdquo;.
+                </p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>
+              Html5 converter
+            </p>
+            <p>
+              Since TeXmacs contains a converter for Html, contributors can
+              follow the development of the Html converter and figure out
+              differences between Html and Html5. Clarifying what they need to
+              develop is important because some features that TeXmacs does not
+              support or does not need (for instance, Html5 includes more
+              features regarding multi-media though, TeXmacs document does not
+              need those features). 
+            </p>
+            <p>
+              Some details of Html5 v.s. Html features are as follows:
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Html5 has lots of new semantic tags: &lt;article&gt;
+                  &lt;header&gt; &lt;nav&gt; &hellip;
+                </p>
+              </li>
+              <li>
+                <p>
+                  Html's tags are most of the low semantics.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Html5 abandons some of Html tags.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Html5 differs in doctype declaration from Html
+                </p>
+              </li>
+              <li>
+                <p>
+                  Html5 uses &lt;canvas&gt; to process painting.
+                </p>
+              </li>
+              <li>
+                <p>
+                  &hellip;&hellip;
+                </p>
+              </li>
+            </ul>
+            <p>
+              Contributors can implement the feature important to TeXmacs
+              documents, mimicking the development of the Html converter.
+            </p>
+          </li>
+          <li>
+            <p>
+              Other converters
+            </p>
+            <p>
+              As for other converters in general, it is up to contributors to
+              implement. The development of the converter framework should
+              give them a good environment to write a core conversion
+              algorithm. Generally, I think there are two ways to implement
+              the conversion.
+            </p>
+            <p>
+              First, direct implementation. In this way, contributors need to
+              find the public part of TeXmacs and Office formats and exclude
+              other meaningless parts. Then, they should write a conversion
+              process between two encoding formats. Since the TeXmacs document
+              is content-limited and simple, the conversion is possible to
+              make.
+            </p>
+            <p>
+              Second, indirect implementation. This means contributors need
+              open-source solutions - to include a third-party module in
+              TeXmacs's code. And the module needs to process the conversion
+              itself. For example, a &ldquo;TeXmacs to Office doc&rdquo;
+              process can be performed by &ldquo;pandoc&rdquo; as
+              &ldquo;TeXmacs to markdown, and markdown to Office doc&rdquo;.
+              This way is more possible but needs to be careful about the
+              interest of developers.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Framework Development
+        </p>
+        <p>
+          After finish getting familiar with Front-End and Back-End codes
+          about converters while finish developing markdown converter, the
+          <b>second task</b> is to develop the converter framework. The above
+          analysis show several features the framework should support as
+          follows:
+        </p>
+        <ol>
+          <li>
+            <p>
+              Front-End: add conversion options in TeXmacs automatically after
+              contributors declare new converters. This part should be an
+              abstraction to contributors unless they want to modify this.
+            </p>
+          </li>
+          <li>
+            <p>
+              Back-End: give contributors some fixed declarations and methods
+              for writing converters, and let them write the core code of
+              algorithm without worrying about other things. This part should
+              also provide documents and standards to guide contributors to
+              develop their converters legally.
+            </p>
+          </li>
+          <li>
+            <p>
+              Assume contributors finished converter development already, they
+              need to test new features to evaluate. The feedback of users is
+              important to give directions for further development. TeXmacs
+              project has some Google test samples and testing code (<a href="https://github.com/texmacs/texmacs/tree/master/tests"><tt>https://github.com/texmacs/texmacs/tree/master/tests</tt></a>).
+              I can add merge these codes to the framework as a testing part.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Following the above steps can still meet with new ideas and annoying
+          bugs, so I need to develop functions in iterations.
+        </p>
+      </li>
+      <li>
+        <p>
+          Document Writing
+        </p>
+        <p>
+          After framework development is completed, I need to update the
+          official document (<a href="webman-convert.en.html"><tt>webman-convert.en.html</tt></a>) to
+          show that TeXmacs includes a converter framework. Additionally, a
+          summary of my development is nice to have. My experience of writing
+          papers and documents can help me in this part.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-7">6<span style="margin-left: 1em"></span>Plan<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          1.Jun. ~  30.Jun.
+        </p>
+        <dl>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Decouple the core codes of Front-End and Back-End parts, try
+                some modification, and get familiar with compiling and testing
+                procedures. 
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Get familiar with the markdown converter's source code. 
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Transplant markdown converter into TeXmacs. Add new converter
+                options to the user interface.
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Basic test and verification.
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                If there is any modification in the master branch, discuss it
+                with mentors first.
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Optional: develop a standard converter-dev framework for
+                contributors to for the better experience of converter
+                developing.
+              </p>
+            </dd>
+          </p>
+        </dl>
+      </li>
+      <li>
+        <p>
+          1.Jul. ~ 5.Aug.
+        </p>
+        <dl>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Develop a standard converter-dev framework for contributors to
+                for the better experience of converter developing.
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Find a proper TeXmacs document for conversion tests. Conduct
+                conversion tests and compare results.Fix
+                &ldquo;TeXmacs-to-markdown&rdquo; bugs. Find bugs and try to
+                fix them, i.e. to figure out why some text cannot be
+                converted.
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Optional: write a &ldquo;markdown-to-TeXmacs&rdquo; converter.
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Try the best to realize a perfect conversion and form a
+                conversion cycle.
+              </p>
+            </dd>
+          </p>
+        </dl>
+      </li>
+      <li>
+        <p>
+          6.Aug. ~ 31.Aug.
+        </p>
+        <dl>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Write help documents of markdown converter.
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Write standards documents of the converter framework.
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Write a development summary. 
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Fix minor bugs and check code style. Conduct the final
+                verification. 
+              </p>
+            </dd>
+          </p>
+          <p>
+            <dt>
+              
+            </dt>
+            <dd>
+              <p>
+                Make sure everything in GNU standards.
+              </p>
+            </dd>
+          </p>
+        </dl>
+      </li>
+    </ul>
+    <h2 id="auto-8">7<span style="margin-left: 1em"></span>Communication<span style="margin-left: 1em"></span></h2>
+    <p>
+      In the upcoming period of time and summer, I will first go to Jiangsu,
+      China, to get my graduation certificate, and go back to Shandong, China,
+      my hometown. During this time, I can absorb in development without
+      dealing with other things. Also, I will choose to use <b>Zoom</b> with
+      mentors to communicate face-to-face. Using the <b>dev-mail list</b>,
+      <b>email</b> or <b>Gitter</b> is also helpful. We may live in a
+      different time zone, so make an appointment before start communication
+      is necessary.
+    </p>
+    <h2 id="auto-9">8<span style="margin-left: 1em"></span>Qualification<span style="margin-left: 1em"></span></h2>
+    <p>
+      As a senior student in the Computer Science department, I have been
+      working with my friend to develop lots of team projects. They are great
+      though, I found that I have been merely making toy programs in
+      university and only have limited experience of developing real
+      industrial projects. So a real, full-stack development experience is
+      important to me, not to mention that it is what I need to become a
+      high-caliber developer and software specialist in the world.
+    </p>
+    <p>
+      GSoC provides me a good chance to work with great mentors to maintain
+      open-source projects. I choose to improve TeXmacs because it is close to
+      my academic life and the product can improve my writing experience.
+      Also, I have some experience developing user-oriented products. I think
+      my code-decoupling ability, solid coding ability, paper writing skill,
+      and persistence will help TeXmacs become better. 
+    </p>
+    <p>
+      I hope to join the GNU community and try the best of mine to make
+      TeXmacs greater!
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
