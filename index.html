@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="http://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>GSoC 2020 Project for GNU TeXmacs</title>
+    <meta content="TeXmacs 1.99.12" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.5em; } .subsup { display:
+      inline; vertical-align: -0.2em } .subsup td { padding: 0px; text-align:
+      left} .fraction { display: inline; vertical-align: -0.8em } .fraction td
+      { padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center }
+      .title-block p { margin: 0px } .compact-block p { margin-top: 0px;
+      margin-bottom: 0px } .left-tab { text-align: left } .center-tab {
+      text-align: center } .balloon-anchor { border-bottom: 1px dotted
+      #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em } 
+    </style>
+  </head>
+  <body>
+    <table class="title-block">
+      <tr>
+        <td><table class="title-block">
+          <tr>
+            <td><font style="font-size: 168.2%"><b>GSoC 2020 Project for GNU
+            TeXmacs</b></font></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <h2 id="auto-1">Task<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          TeXmacs -&gt; markdown converter development
+        </p>
+        <ul>
+          <li>
+            <p>
+              Incorporate max's <a href="https://bitbucket.org/mdbenito/tm2md/src/master/">tm2md</a> converter into TeXmacs.
+              (done)
+            </p>
+          </li>
+          <li>
+            <p>
+              Write new menu and preference. (done)
+            </p>
+          </li>
+          <li>
+            <p>
+              Bug Fixing
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          markdown -&gt; TeXmacs converter development
+        </p>
+        <ol>
+          <li>
+            <p>
+              Direct Conversion
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Write C++ code for parsing markdown document as <tt class="verbatim">tree</tt>.
+                  (WIP)
+                </p>
+              </li>
+              <li>
+                <p>
+                  Write scheme code for tree -&gt; md-stree conversion.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Write scheme code for md-stree -&gt; tm-stree conversion.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              Inderect Conversion (makeshift)
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Use markdown -&gt; html 3rd party script and exsited html
+                  -&gt; TeXmacs converter to implement conversion.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2">Links<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <a href="mentors.html">Materials</a> provided by Mentors
+        </p>
+      </li>
+      <li>
+        <p>
+          Materials provided by the Student
+        </p>
+        <ul>
+          <li>
+            <p>
+              <a href="proposal.html">Proposal</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Other documents
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2 id="auto-3">Quickstart<span style="margin-left: 1em"></span></h2>
+    <p>
+      This page serves as a project tracker.
+    </p>
+    <h3 id="auto-4">Download<span style="margin-left: 1em"></span></h3>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <div style="margin-left: 35.145870328812px">
+        <div style="text-indent: 0em">
+          <div class="compact-block">
+            <pre class="verbatim" xml:space="preserve">
+cd $HOME
+git clone git@github.com:texmacs/gsoc2020.git
+cd gsoc2020</pre>
+          </div>
+        </div>
+      </div>
+    </p>
+    <h3 id="auto-5">Update<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          Update the files ended with <tt class="verbatim">.tm</tt>, and do not forget
+          to generate the corresponding <tt class="verbatim">.html</tt> files using
+          Tools -&gt; Update web site&hellip; . Assuming you have downloaded
+          the repo to <tt class="verbatim">$HOME/gsoc2020</tt>, please choose <tt class="verbatim">$HOME/gsoc2020</tt>
+          and click the <tt class="verbatim">Choose</tt> button.
+        </p>
+      </li>
+      <li>
+        <p>
+          Create pull request to <a href="https://github.com/texmacs/gsoc2020">gsoc2020</a>
+        </p>
+      </li>
+    </ol>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
